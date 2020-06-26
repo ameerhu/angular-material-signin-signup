@@ -1,3 +1,29 @@
-<mat-toolbar>My App</mat-toolbar>
+<mat-sidenav-container>
+    <mat-sidenav #sidenav role="navigation">
+    </mat-sidenav>          
+<mat-sidenav-content>
+    <mat-toolbar>
+        <div fxHide.gt-xs>
+            <button mat-icon-button>
+                <mat-icon>menu</mat-icon>
+            </button>
+        </div>
+        <div>
+            <a routerLink="/home">Home</a>
+        </div>
+        <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+            <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+                <li><a>Setting</a></li>
+                <li><a>Logout</a></li>
+            </ul>
+        </div>
+    </mat-toolbar>
+    <main>
+        <router-outlet></router-outlet>
+    </main>
+</mat-sidenav-content>
+</mat-sidenav-container>
+
+<!-- <mat-toolbar>My App</mat-toolbar>
 <button mat-raised-button>Test</button>
-<router-outlet></router-outlet>
+<router-outlet></router-outlet> -->
